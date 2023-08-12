@@ -1,5 +1,7 @@
 package com.hakan.rickandmortycompose.data.remote.dto.character_detail_dto
 
+import com.hakan.rickandmortycompose.domain.model.CharacterDetail
+
 data class CharacterDetailDto(
     val created: String,
     val episode: List<String>,
@@ -14,3 +16,6 @@ data class CharacterDetailDto(
     val type: String,
     val url: String
 )
+fun CharacterDetailDto.toCharacterDetail() : CharacterDetail {
+    return CharacterDetail(name,episode,gender,image,status,origin,species,status)
+}
