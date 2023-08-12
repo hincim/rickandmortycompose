@@ -5,12 +5,12 @@ import com.hakan.rickandmortycompose.data.remote.dto.character_dto.CharactersDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface RickAndMortyAPI {
+interface RandMAPI {
 
     @GET("character")
     suspend fun getCharacters(): CharactersDto
 
     @GET("character/{id}")
-    suspend fun getCharacterDetail(@Path("id") id: Int): CharacterDetailDto
+    suspend fun getCharacterDetail(@Path("id") id: String): CharacterDetailDto
 
 }
