@@ -13,7 +13,7 @@ import javax.inject.Inject
 class GetCharacterDetailUseCase @Inject constructor(
     private val repo: RandMRepository
 ) {
-    fun executeGetMovieDetails(imdbId: String) : Flow<Resource<CharacterDetail>> = flow {
+    fun executeGetCharacterDetails(imdbId: String) : Flow<Resource<CharacterDetail>> = flow {
         try {
             emit(Resource.Loading())
             val characterDetail = repo.getCharacterDetail(imdbId)

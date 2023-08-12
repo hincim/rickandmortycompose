@@ -33,7 +33,7 @@ object AppModule {
     @Singleton
     fun provideMovieRepository(api: RandMAPI): RandMRepository{
 
-        return  RandMRepositoryImpl(api)
+        return RandMRepositoryImpl(api)
     }
 }
 

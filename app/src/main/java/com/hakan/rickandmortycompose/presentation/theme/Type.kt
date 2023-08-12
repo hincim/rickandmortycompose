@@ -1,4 +1,4 @@
-package com.hakan.rickandmortycompose.ui.theme
+package com.hakan.rickandmortycompose.presentation.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
