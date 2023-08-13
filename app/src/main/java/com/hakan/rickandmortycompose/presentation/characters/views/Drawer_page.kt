@@ -18,31 +18,3 @@ import androidx.compose.ui.unit.dp
 import com.hakan.rickandmortycompose.R
 import com.hakan.rickandmortycompose.domain.model.Characters
 
-@Composable
-fun DrawerComponent(characters: List<Characters>) {
-    Spacer(modifier = Modifier.height(16.dp))
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Image(
-            contentDescription = "Rick And Morty",
-            painter = painterResource(id = R.drawable.rickandmorty),
-            modifier = Modifier
-                .padding(16.dp)
-                .size(200.dp, 200.dp)
-                .clip(RectangleShape)
-        )
-
-        Text(text = "Episodes", fontWeight = FontWeight.Bold)
-        Spacer(modifier = Modifier.height(12.dp))
-        LazyColumn(modifier = Modifier.fillMaxSize()) {
-            items(characters) { character ->
-                Text(text = character.name)
-            }
-        }
-    }
-}

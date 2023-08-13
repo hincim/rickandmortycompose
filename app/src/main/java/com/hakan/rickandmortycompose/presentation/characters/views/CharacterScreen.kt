@@ -1,6 +1,5 @@
 package com.hakan.rickandmortycompose.presentation.characters.views
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -11,20 +10,15 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import com.hakan.rickandmortycompose.R
-import com.hakan.rickandmortycompose.domain.model.Characters
 import com.hakan.rickandmortycompose.presentation.Screen
 import com.hakan.rickandmortycompose.presentation.characters.CharactersViewModel
+import com.hakan.rickandmortycompose.presentation.episodes.views.DrawerComponent
 import kotlinx.coroutines.launch
 
 
@@ -56,7 +50,7 @@ fun CharacterScreen(
             )
         },
         drawerContent = {
-            DrawerComponent(characters = state.characters)
+            DrawerComponent()
         },
         drawerGesturesEnabled = true,
         ) {
